@@ -69,10 +69,34 @@ def about():
 
 @app.route('/quizzes', methods=['GET','POST'])
 def quizzes():
+    if request.method == "POST":
+        points = 0
+        answer1 = request.form['question1']
+        if answer1 == "shut his ears in the oven door":
+            points += 1
+        answer2 = request.form['question2']
+        if answer2 == "barmy old codger":
+            points += 1
+        answer3 = request.form['question3']
+        if answer3 == "a sock":
+            points += 1
+        answer4 = request.form['question4']
+        if answer4 == "wheezy":
+            points += 1
+        answer5 = request.form['question5']
+        if answer5 == "bad dark wizard":
+            points += 1
+
     return render_template ("quizzes.html")
-        
 
 
+@app.route('/news', methods=['GET','POST'])
+def news():
+    return render_template ("news.html")
+
+@app.route('/final', methods=['GET','POST'])
+def final():
+    return render_template ("final.html")
 
 
 	# return render_template("home.html")
