@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+<head>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<style>
+    body {
+        background-image: url('static/inbg.jpeg');
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+</style>
+
+    <meta charset="UTF-8">
+    <title>Signin</title>
+</head>
+
+
+<body style="color:white;">
+    <form method="post" action="/">
+        <!-- Heading -->
+        <h4>
+        Log in to your account
+        </h4>
+
+        <!-- Subheading -->
+        <p >
+        Please fill up your information below to sign in.
+        </p>
+
+        <!-- Email -->
+        <div>
+            <label>Email address*</label>
+            <div>
+                <input type="email"  name="email" id="emailStr" required>
+            </div>
+        </div>
+
+        <!-- Password -->
+        <div>
+            <label>Password*</label>
+            <div class="input-group">
+                <input type="password"  name="password" minlength="6">
+            </div>
+        </div>
+        
+        <!-- Button -->
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
+    <br>
+    <a href="/signup"><button>signup</button></a>
+    {{error}}
+</body>
+</center>
+</html>
